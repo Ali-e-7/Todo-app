@@ -1,3 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+    font-family: 'iranyekan' !important;
+    text-align: right !important;
+    direction: rtl !important;
+    box-sizing: border-box;
+}
 body {
-    background-color: #592f83;
+    background-color: #0d306e;
+}
+@font-face {
+    font-family: 'iranyekan';
+    src: local('iranyekan'), url(../fonts/Qs_Iranyekan.ttf) format('truetype');
+}
+button {
+    cursor: pointer;
+    font-family: 'iranyekan' !important;
+}
+input {
+    font-family: 'iranyekan' !important;
 }

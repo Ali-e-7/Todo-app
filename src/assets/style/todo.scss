@@ -1,0 +1,151 @@
+
+$green: #22b573;
+$grey: #555;
+$transitionSpeed: 200ms;
+
+.todo-app {
+    background-color: white;
+    width: 60rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: auto;
+}
+.todo-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid gray;
+}
+.add-todo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    
+}
+.add-todo-input {
+    border-radius: 2rem;
+    margin: 0 10px;
+    border: 1px solid gray;
+    width: 20rem;
+    padding: 0.4rem 1rem;
+}
+.add-todo-btn {
+    border: none;
+    background-color: rgb(6, 23, 119);
+    padding: 0.4rem 2rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: large;
+}
+.todo-body {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 1rem;
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    button {
+        width: 7rem;
+        margin: 0 10px;
+        padding: 5px;
+        border: 1px solid rgb(6, 23, 119);
+        border-radius: 10rem;
+        color: rgb(6, 23, 119);
+        background-color: rgb(222, 239, 255);
+    }
+}
+.todo-list {
+    border-bottom: 1px dashed gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:5px ;
+    &:last-child{
+        border-bottom: none
+    }
+}
+.todo-content {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 5px 0;
+}
+.todo-title {
+    margin: 0;
+}
+.todo-date {
+    margin: 0;
+    color: gray;
+}
+.action-btn {
+    border: none;
+    margin: 0 5px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: transparent;
+
+}
+.delete {
+    color: red;
+}
+.edit {
+    color: rgb(78, 107, 161);
+}
+.complete-btn {
+    margin-left: 1.5rem;
+}
+input[type="checkbox"] + label {
+  margin-top: 5px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $grey;
+  border-radius: 100%;
+  // top: 50%;
+  // left: 10%;
+  transform: translate(-50%, -50%);
+  transition: all ease-out $transitionSpeed;
+  text-indent: 90px;
+  font: normal normal 30px/60px "Helvetica";
+  white-space: nowrap;
+  color: $grey;
+  user-select: none;
+  
+   &:after {
+    content: "";
+    position: absolute;
+    width:0px;
+    height: 12px;
+    border-bottom: 3px solid $green;
+    border-left: 3px solid $green;
+    top: 25%;
+    left: 50%;
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: all ease-out $transitionSpeed;
+  }
+}
+
+input[type="checkbox"]:checked + label {
+  border: 2px solid $green;
+  
+  &:after {
+    opacity: 1;
+    width: 30px;
+  }
+}
+.chk {
+  display: none;
+}
+.no-data {
+    text-align: center;
+}
+
+
